@@ -48,7 +48,11 @@ app.get('/weather', (required, response, next) => {
     let city = required.query.cityName;
 
     let selectedCity = data.find(weather => weather.city_name === city);
-    let cityCleanedUp = new Forecast(selectedCity);
+    
+    let cityCleanedUp = [];
+    for(let i = 0; i < selectedCity.data.length; i++) {
+      cityCleanedUp.push(new Forecast(selectedCity[i]));
+    }
     response.send(cityCleanedUp);
 
   } catch (error) {
@@ -72,9 +76,9 @@ app.use((error, request, response, next) => {
 
 // CLASSES
 class Forecast {
-  constructor(cityObject, day) {
-    this.date = cityObject.data[day].valid_date;
-    this.description = cityObject.data[day].weather.description;
+  constructor(cityObjectday) {
+    this.date = cityObjectday.data.valid_date;
+    this.description = cityObjectday.data.weather.description;
   }
 }
 
