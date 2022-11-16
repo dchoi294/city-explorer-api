@@ -44,15 +44,18 @@ app.get('/sayHello', (required, response)=> {
 });
 
 app.get('/weather', (required, response, next) => {
+
   try {
     let city = required.query.cityName;
 
-    let selectedCity = data.find(weather => weather.city_name === city);
-    
-    let cityCleanedUp = [];
-    for(let i = 0; i < selectedCity.data.length; i++) {
-      cityCleanedUp.push(new Forecast(selectedCity[i]));
-    }
+    let selectedCity = data.find(weather => weather.city_name.toLowerCase() === city.toLowerCase());
+
+    // let cityCleanedUp = [];
+    // for(let i = 0; i < selectedCity.data.length; i++) {
+    //   cityCleanedUp.push(new Forecast(selectedCity[i]));
+    // }
+    let cityCleanedUp = selectedCity.data.map(everyday => new Forecast(everyday));
+    console.log('hi');
     response.send(cityCleanedUp);
 
   } catch (error) {
@@ -77,8 +80,8 @@ app.use((error, request, response, next) => {
 // CLASSES
 class Forecast {
   constructor(cityObjectday) {
-    this.date = cityObjectday.data.valid_date;
-    this.description = cityObjectday.data.weather.description;
+    this.date = cityObjectday.valid_date;
+    this.description = cityObjectday.weather.description;
   }
 }
 
