@@ -49,7 +49,7 @@ app.get('/sayHello', (required, response)=> {
 
 app.get('/weather', getWeathersHandler);
 
-app.get('/moive', getMoviesHandler);
+app.get('/movie', getMoviesHandler);
 
 // '*' wild card
 // this will run for any route not defined above

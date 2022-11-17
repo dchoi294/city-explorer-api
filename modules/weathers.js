@@ -19,8 +19,8 @@ async function getWeathers(required, response, next) {
 
 class Forecast {
   constructor(cityObjectday) {
-    this.date = cityObjectday.data.valid_date;
-    this.description = cityObjectday.data.weather.description;
+    this.date = cityObjectday.datetime;
+    this.description = cityObjectday.weather.description;
   }
 }
 
