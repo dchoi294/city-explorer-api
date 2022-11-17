@@ -5,11 +5,11 @@
 
 ## Overview
 
-Demo back-end server of the city explorer. Practicing how to create a back-end server and learning how to use it with my own hand.
+Demo back-end server of the city explorer. Practicing how to create a back-end server and learning how to use it with my own hand pulling data from actual sites and put it on front-end server.
 
 ## Getting Started
 
-npm installation => express, dotenv, cors, and nodeman preferred.
+npm installation => express, dotenv, cors, nodeman (preferred), api keys.
 
 ## Architecture
 
@@ -19,15 +19,15 @@ Express server receives axios request from the client and return weather data of
 
 Name of feature: Setup Server Repo, Recorded Lesson Video
 
-Estimate of time needed to complete: 5 hours
+Estimate of time needed to complete: 
 
-Start time: 16:30
+Start time: 
 
-Finish time: 19:11
+Finish time: 
 
-Actual time needed to complete: 2 hours and 41 minutes, took most of the time to re-watch recorded lesson video.
+Actual time needed to complete: 
 
 ## Credit and Collaborations
 
-Jason Christopher
-![WRRC-Lab7](/image/WRRC-Lab7.png "WRRC-Lab7")  
+Brenda Jow
+![WRRC-Lab7](/image/WRRC-Lab8.png "WRRC-Lab8")  

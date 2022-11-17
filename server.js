@@ -4,7 +4,7 @@ console.log(':D');
 
 // Require
 const express = require('express');
-let data = require('./data/weather.json');
+const axios = require('axios');
 
 // we need to bring in our .env file, so we'll use this after we have installed
 // `npm i dotenv`
@@ -43,10 +43,25 @@ app.get('/sayHello', (required, response)=> {
   response.send(`Hi ${required.query.name} ${lastName}`);
 });
 
-app.get('/weather', (required, response, next) => {
+
+app.get('/weather', async(required, response, next) => {
 
   try {
-    let city = required.query.cityName;
+ 
+    let searchLat = required.query.searchedLat;
+    let searchLon = required.query.searchedLon;
+    let weatherCity = await axios.get(`https://api.weatherbit.io/v2.0/forecast/daily?lat=${searchLat}&lon=${searchLon}&key=${process.env.WEATHER_API_KEY}&units=I&days=3`);
+
+
+    let city = required.query.searchedCity;
+    let movieCity = await axios.get(`https://api.themoviedb.org/3/search/movie?api_key=${process.env.MOVIE_API_KEY}&query=${city}`);
+
+    let weathers = weatherCity.data.data.map(weather => new Forecast(weather));
+
+    let movies = movieCity.data.results.map(movie => new Movie(movie));
+
+    response.send(weathers);
+    response.send(movies);
 
     let selectedCity = data.find(weather => weather.city_name.toLowerCase() === city.toLowerCase());
 
@@ -57,6 +72,7 @@ app.get('/weather', (required, response, next) => {
     let cityCleanedUp = selectedCity.data.map(everyday => new Forecast(everyday));
     console.log('hi');
     response.send(cityCleanedUp);
+
 
   } catch (error) {
     // create a new instance of the Error object that lives in Express
@@ -82,6 +98,13 @@ class Forecast {
   constructor(cityObjectday) {
     this.date = cityObjectday.valid_date;
     this.description = cityObjectday.weather.description;
+  }
+}
+
+class Movie {
+  constructor(movieObject) {
+    this.title = movieObject.title;
+    this.year = movieObject.release_date.slice(0,4);
   }
 }
 
