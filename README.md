@@ -19,13 +19,13 @@ Express server receives axios request from the client and return weather data of
 
 Name of feature: Setup Server Repo, Recorded Lesson Video
 
-Estimate of time needed to complete: 
+Estimate of time needed to complete: many hours
 
-Start time: 
+Start time: 14:30
 
-Finish time: 
+Finish time: 19:24
 
-Actual time needed to complete: 
+Actual time needed to complete: 2 hours and 54 minutes. About an hour break in between.
 
 ## Credit and Collaborations
 
