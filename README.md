@@ -21,11 +21,11 @@ Name of feature: class github
 
 Estimate of time needed to complete: 3 hours
 
-Start time: 13:40
+Start time: 14:40
 
-Finish time: 
+Finish time: 16:51
 
-Actual time needed to complete: About an hour break in between.
+Actual time needed to complete: 2 hours and 11 minutes to review from lab 6 through 9.
 
 ## Credit and Collaborations
 
