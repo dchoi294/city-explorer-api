@@ -41,12 +41,6 @@ app.get('/', (reqired, response) => {
   response.send('Hello, from our server');
 });
 
-app.get('/sayHello', (required, response)=> {
-  console.log(required.query.name);
-  let lastName = required.query.lastName;
-  response.send(`Hi ${required.query.name} ${lastName}`);
-});
-
 app.get('/weather', getWeathersHandler);
 
 app.get('/movie', getMoviesHandler);
