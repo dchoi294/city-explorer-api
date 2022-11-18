@@ -13,21 +13,27 @@ npm installation => express, dotenv, cors, nodeman (preferred), api keys.
 
 ## Architecture
 
-Express server receives axios request from the client and return weather data of that requested city.
+Express server receives axios request from the client and return weather data of that requested city, and the movie that has the name of the city included in the title.
 
 ## Change Log
 
-Name of feature: Setup Server Repo, Recorded Lesson Video
+Name of feature: class github
 
-Estimate of time needed to complete: many hours
+Estimate of time needed to complete: 3 hours
 
-Start time: 14:30
+Start time: 13:40
 
-Finish time: 19:24
+Finish time: 
 
-Actual time needed to complete: 2 hours and 54 minutes. About an hour break in between.
+Actual time needed to complete: About an hour break in between.
 
 ## Credit and Collaborations
 
-Brenda Jow
-![WRRC-Lab7](/image/WRRC-Lab8.png "WRRC-Lab8")  
+Jason Christopher  
+![WRRC-Lab7](/image/WRRC-Lab7.png "WRRC-Lab7")  
+
+Brenda Jow  
+![WRRC-Lab8](/image/WRRC-Lab8.png "WRRC-Lab8")  
+
+Cody De La Torre  
+![WRRC-Lab9](/image/WRRC-Lab9.png "WRRC-Lab9")  
