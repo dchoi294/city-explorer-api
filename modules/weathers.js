@@ -1,6 +1,5 @@
 const axios = require('axios');
-
-let cache = {};
+const cache = require('./cache');
 
 async function getWeathers(required, response, next) {
   try {
