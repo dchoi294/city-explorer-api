@@ -31,9 +31,6 @@ app.use(cors());
 const PORT = process.env.PORT || 3002;
 // If we see our server running on 3002, that means theere's a problem with our .env file or how we are importing it.
 
-// ROUTES
-// this is where we will write handlers for our endpoints
-
 // create a basic default route
 // app.get() correlates to axios.get()
 // app.get() takes in a parament or a URL in quotes, and callback function
