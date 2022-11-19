@@ -17,15 +17,15 @@ Express server receives axios request from the client and return weather data of
 
 ## Change Log
 
-Name of feature: class github
+Name of feature: class github, W3School
 
-Estimate of time needed to complete: 3 hours
+Estimate of time needed to complete: 2 hours
 
-Start time: 14:40
+Start time: 14:30
 
-Finish time: 16:51
+Finish time: 17:11
 
-Actual time needed to complete: 2 hours and 11 minutes to review from lab 6 through 9.
+Actual time needed to complete: 2 hours and 41 minutes including watching the recorded lesson.
 
 ## Credit and Collaborations
 
@@ -37,3 +37,6 @@ Brenda Jow
 
 Cody De La Torre  
 ![WRRC-Lab9](/image/WRRC-Lab9.png "WRRC-Lab9")  
+
+Ricardo Soto
+![WRRC-Lab10](/image/WRRC-Lab10.png "WRRC-Lab10")  
