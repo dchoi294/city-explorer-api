@@ -1,6 +1,5 @@
 const axios = require('axios');
-
-let cache = {};
+let cache = require('./cache');
 
 async function getMovies(required, response, next) {
   try {
@@ -20,7 +19,6 @@ async function getMovies(required, response, next) {
         data: moviesArray,
         timeStamp: Date.now()
       };
-
       response.status(200).send(moviesArray);
     }
   } catch (error) {
