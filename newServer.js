@@ -11,9 +11,10 @@ app.use(cors());
 const PORT = process.env.PORT || 3002;
 
 app.get('/weather', weatherHandler);
-app.get('/movies', movieHandler);
+app.get('/getMovies', movieHandler);
 
 function weatherHandler(request, response) {
+  //const {lat,lon} = request.query;
   const lat = request.query.queriedLat;
   const lon = request.query.queriedLon;
   weather(lat, lon)

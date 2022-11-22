@@ -1,6 +1,7 @@
 'use strict';
 const axios = require('axios');
-let cache = require('./cache.js');
+const cache = require('./cache.js');
+require('dotenv').config();
 
 async function getMovies(cityName) {
   const key = 'movie-' + cityName;
