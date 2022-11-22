@@ -14,9 +14,9 @@ app.get('/weather', weatherHandler);
 app.get('/getMovies', movieHandler);
 
 function weatherHandler(request, response) {
-  //const {lat,lon} = request.query;
-  const lat = request.query.queriedLat;
-  const lon = request.query.queriedLon;
+  const {lat,lon} = request.query;
+  // const lat = request.query.queriedLat;
+  // const lon = request.query.queriedLon;
   weather(lat, lon)
     .then(summaries => response.send(summaries))
     .catch((error) => {
