@@ -1,5 +1,7 @@
+'use strict';
 const axios = require('axios');
 const cache = require('./cache');
+require('dotenv').config();
 
 async function getWeathers(required, response, next) {
   try {
