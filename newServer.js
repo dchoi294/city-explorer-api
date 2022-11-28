@@ -3,8 +3,8 @@
 require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
-const weather = require('./newserver/newWeather');
-const getMovies= require('./newserver/newMovie');
+const weather = require('./newserver/newWeather.js');
+const getMovies= require('./newserver/newMovie.js');
 
 const app = express();
 app.use(cors());

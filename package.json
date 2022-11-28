@@ -2,10 +2,10 @@
   "name": "city-explorer-api",
   "version": "1.0.0",
   "description": "Demo for building a server",
-  "main": "server.js",
+  "main": "newServer.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node newServer.js"
   },
   "repository": {
     "type": "git",
