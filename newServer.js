@@ -14,10 +14,10 @@ app.get('/weather', weatherHandler);
 app.get('/movie', movieHandler);
 
 function weatherHandler(request, response) {
-  const {lat,lon} = request.query;
+  const {searchedLat,searchedLon} = request.query;
   // const lat = request.query.queriedLat;
   // const lon = request.query.queriedLon;
-  weather(lat, lon)
+  weather(searchedLat,searchedLon)
     .then(summaries => response.send(summaries))
     .catch((error) => {
       console.error(error);
@@ -29,9 +29,9 @@ app.listen(PORT, () => console.log(`Server up on ${process.env.PORT}`));
 
 function movieHandler(request, response) {
   //console.log(request.query);
-  const {cityName} = request.query;
+  const {searchedCity} = request.query;
   //console.log(cityName);
-  getMovies(cityName)
+  getMovies(searchedCity)
     .then(summaries => response.send(summaries))
     .catch((error) => {
       console.error(error);
